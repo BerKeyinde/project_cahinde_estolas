@@ -1,0 +1,49 @@
+# depslib dependency file v1.0
+1360655380 source:d:\program files\project_cahinde_estolas\project.cpp
+	"Project.h"
+	<iostream>
+	<string>
+	<cmath>
+
+1360654745 d:\program files\project_cahinde_estolas\project.h
+
+1360654929 source:d:\program files\project_cahinde_estolas\main.cpp
+	<iostream>
+	"Project.h"
+	<string>
+	<cstdlib>
+
+1360919378 source:c:\documents and settings\mao\my documents\downloads\project_cahinde_estolas (1)\project_cahinde_estolas\main.cpp
+	<iostream>
+	"Project.h"
+	<string>
+	<cstdlib>
+
+1360664434 c:\documents and settings\mao\my documents\downloads\project_cahinde_estolas (1)\project_cahinde_estolas\project.h
+
+1360919497 source:c:\documents and settings\mao\my documents\downloads\project_cahinde_estolas (1)\project_cahinde_estolas\project.cpp
+	"Project.h"
+	<iostream>
+	<string>
+	<sstream>
+	<cmath>
+	<cstdlib>
+	<stdint.h>
+
+1360919378 source:c:\documents and settings\mao\desktop\shanti's files\project_cahinde_estolas\project_cahinde_estolas\main.cpp
+	<iostream>
+	"Project.h"
+	<string>
+	<cstdlib>
+
+1360664434 c:\documents and settings\mao\desktop\shanti's files\project_cahinde_estolas\project_cahinde_estolas\project.h
+
+1360919954 source:c:\documents and settings\mao\desktop\shanti's files\project_cahinde_estolas\project_cahinde_estolas\project.cpp
+	"Project.h"
+	<iostream>
+	<string>
+	<sstream>
+	<cmath>
+	<cstdlib>
+	<stdint.h>
+
