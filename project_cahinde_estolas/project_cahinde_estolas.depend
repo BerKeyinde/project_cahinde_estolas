@@ -30,15 +30,16 @@
 	<cstdlib>
 	<stdint.h>
 
-1360919378 source:c:\documents and settings\mao\desktop\shanti's files\project_cahinde_estolas\project_cahinde_estolas\main.cpp
+1361544057 source:c:\documents and settings\mao\desktop\shanti's files\project_cahinde_estolas\project_cahinde_estolas\main.cpp
 	<iostream>
 	"Project.h"
 	<string>
 	<cstdlib>
 
-1360664434 c:\documents and settings\mao\desktop\shanti's files\project_cahinde_estolas\project_cahinde_estolas\project.h
+1361551595 c:\documents and settings\mao\desktop\shanti's files\project_cahinde_estolas\project_cahinde_estolas\project.h
+	<string>
 
-1360919954 source:c:\documents and settings\mao\desktop\shanti's files\project_cahinde_estolas\project_cahinde_estolas\project.cpp
+1361559534 source:c:\documents and settings\mao\desktop\shanti's files\project_cahinde_estolas\project_cahinde_estolas\project.cpp
 	"Project.h"
 	<iostream>
 	<string>
@@ -46,4 +47,44 @@
 	<cmath>
 	<cstdlib>
 	<stdint.h>
+	<vector>
+
+1361954877 source:c:\documents and settings\ate shanti\my documents\shanti's files\project_cahinde_estolas\project_cahinde_estolas\main.cpp
+	<iostream>
+	"Project.h"
+	<string>
+	<cstdlib>
+
+1361954877 c:\documents and settings\ate shanti\my documents\shanti's files\project_cahinde_estolas\project_cahinde_estolas\project.h
+	<string>
+
+1361563365 source:c:\documents and settings\ate shanti\my documents\shanti's files\project_cahinde_estolas\project_cahinde_estolas\project.cpp
+	"Project.h"
+	<iostream>
+	<string>
+	<sstream>
+	<cmath>
+	<cstdlib>
+	<stdint.h>
+	<vector>
+
+1361969211 source:c:\documents and settings\ate shanti\my documents\shanti's files\project_estolas_cahinde\project_cahinde_estolas\main.cpp
+	<iostream>
+	"Project.h"
+	<string>
+	<cstdlib>
+
+1361969211 c:\documents and settings\ate shanti\my documents\shanti's files\project_estolas_cahinde\project_cahinde_estolas\project.h
+	<string>
+
+1361969925 source:c:\documents and settings\ate shanti\my documents\shanti's files\project_estolas_cahinde\project_cahinde_estolas\project.cpp
+	"Project.h"
+	<iostream>
+	<string>
+	<sstream>
+	<fstream>
+	<cmath>
+	<cstdlib>
+	<stdint.h>
+	<vector>
 
