@@ -2,12 +2,13 @@
 #include "Project.h"
 #include <string>
 #include <cstdlib>
+#include <math.h>
 
 
 using namespace std;
 
-string problem[] {"Multiples of 3 and 5", "Even Fibonacci", "Largest Prime Factor of 600851475143", "Largest Palindrome", "Smallest Multiple", "Sum Square Difference", "10001st Prime", "Largest Product in Series","Special Pythagorean Triplet","Summation of primes","Largest Product in a Grid","Highly Divisible Triangular Number","Large Sum","Longest Collatz Sequence","Diophantine Reciprocals A","Powr Digit Sum","Number Letter Counts","Maximum Path Sum I","Counting Sundays","Factorial Digit Sum" ,"Name Scores(","Exit"};
-const int num_problems=21;
+string problem[] {"Multiples of 3 and 5", "Even Fibonacci", "Largest Prime Factor of 600851475143", "Largest Palindrome", "Smallest Multiple","Sum Square Difference", "10001st Prime", "Largest Product in Series","Special Pythagorean Triplet","Summation of primes","Largest Product in a Grid","Highly Divisible Triangular Number","Large Sum","Longest Collatz Sequence","Diophantine Reciprocals A","Powr Digit Sum","Number Letter Counts","Maximum Path Sum I","Counting Sundays","Factorial Digit Sum","Name Scores","1000-digit Fibonacci Number" ," Truncatable Primes","Exit"};
+const int num_problems=23;
 const int Exit=num_problems+1;
 
 int main()
@@ -20,20 +21,21 @@ int main()
     while (done == false)
     {
         system("cls");
-        for (i = 0; i < num_problems+1; i++) {
+        for (i = 0; i < num_problems+1; i++)
+        {
             cout << i+1 << ". " << problem[i] << endl;
         }
 		cout<<"Choose problem: ";
 		cin>>ch;
 		switch (ch)
 		{
-		case 1:
+            case 1:
 
 				proj.multiple_3and5();
 				break;
 
             case 2:
-                proj.even_fibonacce();
+                proj.even_fibonacci();
                 break;
 
             case 3:
@@ -97,6 +99,12 @@ int main()
                 break;
             case 21:
                 proj.name_scores();
+                break;
+            case 22:
+                proj.first_1000_digit_fibonacci();
+                break;
+            case 23:
+                proj.truncatable_primes();
                 break;
 
             case Exit:

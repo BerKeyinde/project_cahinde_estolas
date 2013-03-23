@@ -7,6 +7,8 @@
 #include <cstdlib>
 #include <stdint.h>
 #include <vector>
+#include <cstdio>
+#include <stdio.h>
 #define MAX 200000
 #define LIMIT	1000
 #define TARGET 500//problem no. 12
@@ -15,9 +17,14 @@
 
 
 using namespace std;
-
+#define sz 1000001
+#define mx 1001
 vector <int> primes;
 bool composite [MAX+1];
+bool p[sz];
+long primeTable[78500],nPrime = 0;
+
+typedef long double BigNum;
 
 
 Project::Project()
@@ -32,7 +39,8 @@ Project::~Project()
 
 
 
-	int  x[302];//for problem no. 16
+int  x[302];//for problem no. 16
+
 
 
 
@@ -61,7 +69,7 @@ void Project::multiple_3and5()//PROBLEM NO.1
 	cout<<"       |**************************************************************|\n\n";
 }
 
-void Project::even_fibonacce()//PROBLEM NO.2
+void Project::even_fibonacci()//PROBLEM NO.2
 {
     long a = 1;
 	long b = 2;
@@ -88,19 +96,36 @@ void Project::even_fibonacce()//PROBLEM NO.2
 
 void Project::largest_prime_factor()//PROBLEM NO.3
 {
-     long x=600851475143;
-
-    for(int i=2;i<=sqrt(x);i++){
-        while(x%i==0 && x!= i){
-            x=x/i;
+    long long int i=0, num=600851475143, test=0, temp=0, x=0, check=1;
+    for (i = 1; i <= num; i++)
+    {
+        //x be the largest
+        if (num % i == 0)
+        {
+            temp = 0;
+            for (test=2; temp == 0 && i > test ; test++)
+            {
+                if (i % test == 0)
+                temp++;
+            }
+            if (temp == 0)
+                x = i;
+            check*=x;
+            if (check==num)
+            {
+                cout<<"\n\n\n       |**************************************************************|"<<endl;
+                cout<<"       |                                                              |"<<endl;
+                cout<<"       |  The largest prime factor of the number 600851475143 is "<< x<< " |"<<endl;
+                cout<<"       |                                                              |"<<endl;
+                cout<<"       |                                                              |"<<endl;
+                cout<<"       |**************************************************************|\n\n";
+                break;
+            }
         }
     }
-	 cout<<"\n\n\n       |**************************************************************|"<<endl;
-	 cout<<"       |                                                              |"<<endl;
-	 cout<<"       |  The largest prime factor of the number 600851475143 is "<< x << " |"<<endl;
-	 cout<<"       |                                                              |"<<endl;
-	 cout<<"       |                                                              |"<<endl;
-	 cout<<"       |**************************************************************|\n\n";
+
+
+
 }
 
 void Project::largest_palindrome()//PROBLEM NO.4
@@ -1043,7 +1068,7 @@ void Project::factorial_digit_sum()//PROBLEM NO.20
 
 }
 
-void  Project::name_scores()//PROBLEM NO.21
+void  Project::name_scores()//PROBLEM NO> 21
 {
 
     fstream myfile("names.txt");
@@ -1122,6 +1147,124 @@ void  Project::name_scores()//PROBLEM NO.21
 
 
 
+int numDigits( BigNum num )
+{
+    int digits = 1;
+    while ( num > 10.0 )
+    {
+        num *= 0.1f;
+        ++digits;
+    }
+    return digits;
+}
 
 
 
+void Project::first_1000_digit_fibonacci()//PROBLEM NO.22
+{
+    BigNum a = 1;
+    BigNum b = 1;
+    int x = 2;
+    bool error = false;
+    int n = 0;
+
+    while ( n < 1000 )
+    {
+        n = 1;
+        BigNum fibbonacci = a + b;
+        BigNum num = fibbonacci;
+        while ( num > 10.0 )
+        {
+            num *= 0.1f;
+            ++n;
+        }
+        a = b;
+        b = fibbonacci;
+        ++x;
+    }
+
+
+    cout<<"\n\n\n       |**************************************************************|"<<endl;
+    cout<<"       |                                                              |"<<endl;
+    cout<<"       |  The first term in the Fibonacci sequence to contain 1000    |"<<endl;
+    cout<<"       |                       digits is "<<x<<"                         |"<<endl;
+    cout<<"       |                                                              |"<<endl;
+    cout<<"       |**************************************************************|\n\n";
+
+
+
+}
+
+
+
+void Project::m_truncatable_primes()//PROBLEM NO.23
+{
+    int i,j;
+
+    p[0] = p[1] = true;
+    for( i = 4; i <= sz; i += 2 )
+        p[i] = true;
+
+    primeTable[nPrime++] = 2;
+
+    for( i = 3; i <= mx; i += 2 )
+    {
+        if(!p[i])
+        {
+            primeTable[nPrime++] = i;
+            for( j = i * i; j <= sz; j += i )
+                p[j] = true;
+        }
+    }
+
+    for( i = mx + 2; i <= sz; i += 2 )
+    {
+        if(!p[i])
+        {
+            primeTable[nPrime++] = i;
+        }
+    }
+}
+
+bool isTruncatable(long n)
+{
+    long pow = 10;
+
+    while( pow < n)
+    {
+        if(p[n%pow] || p[n/pow])
+            return false;
+        pow *= 10;
+    }
+
+    return true;
+}
+
+
+void Project::truncatable_primes()
+{
+    long i,ans = 0;
+
+    m_truncatable_primes();
+
+    //cout << "The number of primes under 1 million is " << nPrime << endl;
+
+
+    for( i = 4; i < nPrime; i++)
+    {
+        if( isTruncatable(primeTable[i]) )
+        {
+            ans += primeTable[i];
+           // cout << primeTable[i] << endl;
+        }
+    }
+    cout<<"\n\n\n       |**************************************************************|"<<endl;
+    cout<<"       |                                                              |"<<endl;
+    cout<<"       |  TheThe sum of first 11 truncatable primes is " << ans<<"         |"<<endl;
+    cout<<"       |                                                              |"<<endl;
+    cout<<"       |**************************************************************|\n\n";
+
+
+
+
+}
